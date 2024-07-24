@@ -11,12 +11,12 @@ public class Bruch {
         this.nenner=nenner;
 
     }
-
-    public Bruch() {
+    @Override
+    public String toString() {
+        return zaehler + "/" + nenner;
     }
 
-    public void konsolenAusgabe(){
-
+    public Bruch() {
     }
 
 

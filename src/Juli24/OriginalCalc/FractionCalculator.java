@@ -60,7 +60,7 @@ public class FractionCalculator
                 zaehlerZweiterBruch = Integer.parseInt(args[3]);
                 nennerZweiterBruch = Integer.parseInt(args[4]);
             }
-            int c1, c2, gemNenner, kreuzprodukt, e2 = 0;
+            int z1N2, n1Z2, gemNenner, kreuzprodukt, e2 = 0;
             switch( option )
             {
 
@@ -77,12 +77,12 @@ public class FractionCalculator
                         break;
                     }
                     System.out.print(zaehlerErsterBruch + "/" + nennerErsterBruch + " + " + zaehlerZweiterBruch + "/" + nennerZweiterBruch + " = ");
-                    c1 = zaehlerErsterBruch * nennerZweiterBruch;
-                    c2 = nennerErsterBruch * zaehlerZweiterBruch;
+                    z1N2 = zaehlerErsterBruch * nennerZweiterBruch;
+                    n1Z2 = nennerErsterBruch * zaehlerZweiterBruch;
                     gemNenner = nennerErsterBruch * nennerZweiterBruch;
 
-                    System.out.print(c1 + "/" + gemNenner + " + " + c2 + "/" + gemNenner + " = ");
-                    kreuzprodukt = c1 + c2;
+                    System.out.print(z1N2 + "/" + gemNenner + " + " + n1Z2 + "/" + gemNenner + " = ");
+                    kreuzprodukt = z1N2 + n1Z2;
                     e2 = gemNenner;
                     ergebnisEins = kreuzprodukt;
                     ergebnisZwei = e2;
@@ -117,12 +117,12 @@ public class FractionCalculator
                         break;
                     }
                     System.out.print(zaehlerErsterBruch + "/" + nennerErsterBruch + " - " + zaehlerZweiterBruch + "/" + nennerZweiterBruch + " = ");
-                    c1 = zaehlerErsterBruch * nennerZweiterBruch;
-                    c2 = nennerErsterBruch * zaehlerZweiterBruch;
+                    z1N2 = zaehlerErsterBruch * nennerZweiterBruch;
+                    n1Z2 = nennerErsterBruch * zaehlerZweiterBruch;
                     gemNenner = nennerErsterBruch * nennerZweiterBruch;
                     gemNenner = nennerZweiterBruch * nennerErsterBruch;
-                    System.out.print(c1 + "/" + gemNenner + " - " + c2 + "/" + gemNenner + " = ");
-                    kreuzprodukt = c1 - c2;
+                    System.out.print(z1N2 + "/" + gemNenner + " - " + n1Z2 + "/" + gemNenner + " = ");
+                    kreuzprodukt = z1N2 - n1Z2;
                     e2 = gemNenner;
                     ergebnisEins = kreuzprodukt;
                     ergebnisZwei = e2;
@@ -193,11 +193,11 @@ public class FractionCalculator
                         break;
                     }
                     System.out.print(zaehlerErsterBruch + "/" + nennerErsterBruch + " : " + zaehlerZweiterBruch + "/" + nennerZweiterBruch + " = ");
-                    c1 = zaehlerZweiterBruch;
-                    c2 = nennerZweiterBruch;
-                    System.out.print(zaehlerErsterBruch + "/" + nennerErsterBruch + " * " + c2 + "/" + c1 + " = ");
-                    kreuzprodukt = zaehlerErsterBruch * c2;
-                    e2 = nennerErsterBruch * c1;
+                    z1N2 = zaehlerZweiterBruch;
+                    n1Z2 = nennerZweiterBruch;
+                    System.out.print(zaehlerErsterBruch + "/" + nennerErsterBruch + " * " + n1Z2 + "/" + z1N2 + " = ");
+                    kreuzprodukt = zaehlerErsterBruch * n1Z2;
+                    e2 = nennerErsterBruch * z1N2;
                     ergebnisEins = kreuzprodukt;
                     ergebnisZwei = e2;
                     if( ergebnisZwei == 0 )
