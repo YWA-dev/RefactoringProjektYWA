@@ -1,4 +1,43 @@
 package Juli24.RefactoredCalc;
 
-public class MultiplicationFractionCalculator {
+public class MultiplicationFractionCalculator extends AbstractDualFractionCalculator
+{
+
+   public MultiplicationFractionCalculator(Bruch[] doppelBruchArray)
+   {
+      setzeBruchParameter(doppelBruchArray);
+      berechneBruchAusZweiBruechen(doppelBruchArray);
+   }
+
+   @Override
+   public Bruch berechneBruchAusZweiBruechen(Bruch[] brueche)
+   {
+      if( brueche.length != 2 )
+      {
+         throw new IllegalArgumentException("Das Array darf nur zwei Brüche enthalten");
+      }
+
+      /** Berechnung Multiplikation **/
+      int b1z = brueche[0].getZaehler();
+      int b1n = brueche[0].getNenner();
+      int b2z = brueche[1].getZaehler();
+      int b2n = brueche[1].getNenner();
+      int ergebnisZaehler = b1z * b2z;
+      int ergebnisNenner = b1n * b2n;
+      int gcd = berechneGroesstenGemNenner(ergebnisZaehler, ergebnisNenner);
+
+      if( gcd > 1 )
+      {
+         ergebnisZaehler /= gcd;
+         ergebnisNenner /= gcd;
+      }
+
+      Bruch ergebnisBruch = new Bruch(ergebnisZaehler, ergebnisNenner);
+
+      System.out.println("Multiplikation:");
+      System.out.println(
+            b1z + "/" + b1n + " * " + b2z + "/" + b2n + " = " + b1z * b2z + "/" + b1n * b2n + " = " + ergebnisZaehler + "/" + ergebnisNenner);
+
+      return ergebnisBruch;
+   }
 }

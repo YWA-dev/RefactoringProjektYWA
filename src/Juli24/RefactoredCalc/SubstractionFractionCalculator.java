@@ -18,6 +18,7 @@ public class SubstractionFractionCalculator extends AbstractDualFractionCalculat
             throw new IllegalArgumentException("Das Array darf nur zwei Brüche enthalten");
         }
 
+        /** Berechnung Subtraktion **/
         System.out.println("Subtraktion:");
         System.out.print(b1z + "/" + b1n + " - " + b2z + "/" + b2n + " = ");
         System.out.print(z1xn2 + "/" + gemNenner + " - " + z2xn1 + "/" + gemNenner + " = ");
