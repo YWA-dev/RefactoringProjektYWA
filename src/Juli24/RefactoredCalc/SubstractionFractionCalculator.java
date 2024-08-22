@@ -1,17 +1,12 @@
 package Juli24.RefactoredCalc;
 
 public class SubstractionFractionCalculator extends AbstractDualFractionCalculator {
-    /** DONE **/
+
     public SubstractionFractionCalculator(Bruch[] doppelBruchArray) {
         setzeBruchParameter(doppelBruchArray);
         berechneBruchAusZweiBruechen(doppelBruchArray);
     }
 
-    public void ausfuehren(boolean jUnit) {
-
-    }
-
-    /* Implementation Subtraktion zweier Brüche */
     @Override
     public Bruch berechneBruchAusZweiBruechen(Bruch[] brueche) {
         if (brueche.length != 2) {
@@ -27,6 +22,8 @@ public class SubstractionFractionCalculator extends AbstractDualFractionCalculat
         System.out.print(subtraktionsProdukt + "/" + gemNenner);
 
         int gcd = berechneGroesstenGemNenner(subtraktionsProdukt, gemNenner);
+
+        /** Kürzen des Bruchs **/
         if (gcd > 1) {
             subtraktionsProdukt /= gcd;
             gemNenner /= gcd;

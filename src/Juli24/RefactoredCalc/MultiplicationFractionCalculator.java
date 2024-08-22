@@ -26,6 +26,7 @@ public class MultiplicationFractionCalculator extends AbstractDualFractionCalcul
       int ergebnisNenner = b1n * b2n;
       int gcd = berechneGroesstenGemNenner(ergebnisZaehler, ergebnisNenner);
 
+      /** Kürzen des Bruchs **/
       if( gcd > 1 )
       {
          ergebnisZaehler /= gcd;

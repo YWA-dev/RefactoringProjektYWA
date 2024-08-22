@@ -17,7 +17,7 @@ public class DivisionFractionCalculator extends AbstractDualFractionCalculator
          throw new IllegalArgumentException("Das Array darf nur zwei Brüche enthalten");
       }
 
-      /**Berechnung Division**/
+      /** Berechnung Division **/
       int b1z = brueche[0].getZaehler();
       int b1n = brueche[0].getNenner();
       int b2z = brueche[1].getZaehler();
@@ -33,7 +33,7 @@ public class DivisionFractionCalculator extends AbstractDualFractionCalculator
 
       int gcd = berechneGroesstenGemNenner(ergebnisZaehler, ergebnisNenner);
 
-      /*Kürzen des Bruchs*/
+      /** Kürzen des Bruchs **/
       if( gcd > 1 )
       {
          ergebnisZaehler /= gcd;

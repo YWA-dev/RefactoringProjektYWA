@@ -31,7 +31,7 @@ public class AdditionFractionCalculator extends AbstractDualFractionCalculator
 
       int gcd = berechneGroesstenGemNenner(kreuzProdukt, gemNenner);
 
-      /*Kürzen des Bruchs*/
+      /** Kürzen des Bruchs **/
       if( gcd > 1 )
       {
          kreuzProdukt /= gcd;
